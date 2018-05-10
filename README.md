@@ -2,6 +2,8 @@
 ### 子域名嗅探器，可以嗅探指定根域名的子域名，使用时将domain修改为想要嗅探的域名调用相应的方法即可开始嗅探，嗅探到之后将会以标准输出的形式输出子域名默认页面的标题和完整域名
 
 示例：
+<br> 根域名： jlu.edu.cn
+<br> 子域名：
 <br> m.jlu.edu.cn : 校园网络流量数据统计分析图形站
 <br> v.jlu.edu.cn : 云窗2.0校园版-云窗是空间无限
 <br> ai.jlu.edu.cn : Intelligent Information Processing Laboratory

@@ -13,7 +13,9 @@ import java.io.IOException;
  */
 public class FindSubDomain {
     //根域名
-    private static String domain = "jlu.edu.cn";
+    private static String domain = "byted.org";
+    //超时时间，会极大的影响性能但是过小的timeout又可能导致部分延迟过高的子站被漏，
+    private static int timeOut = 1000;
 
     public static String getDomain() {
         return domain;
@@ -32,7 +34,7 @@ public class FindSubDomain {
      */
     public static String isPrefixAvailable(String prefix) {
         try {
-            Document doc = Jsoup.connect("http://" + prefix + "." + domain).get();
+            Document doc = Jsoup.connect("http://" + prefix + "." + domain).timeout(timeOut).get();
             return doc.title();
         } catch (IOException e) {
             return "404";

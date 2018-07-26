@@ -113,6 +113,16 @@ public class FindSubDomain {
     }
 
     /**
+     * （Facade模式应用）查找五位字符内的所有子域名
+     */
+    public static void FindSubIn12345() {
+        FindSubIn1("");
+        FindSubIn2("");
+        FindSubIn3("");
+        FindSubIn4("");
+        FindSubIn5("");
+    }
+    /**
      * 内部线程，用于执行嗅探
      */
     private static class FindSubIn3Thread extends Thread {
@@ -130,6 +140,6 @@ public class FindSubDomain {
     }
 
     public static void main(String[] args) throws InterruptedException {
-        FindSubIn1234();
+        FindSubIn12345();
     }
 }
